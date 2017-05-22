@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by abadi on 5/13/17 in com.weather.assignment.controller.
  */
@@ -24,7 +27,17 @@ public class WeatherControl {
     @RequestMapping (value = "/weather/{zipcode}", method = RequestMethod.GET)
     @ExceptionHandler(DataNotFoundException.class)
     @ResponseBody
-    public Weather getWeather (@PathVariable("zipcode") String zipcode){
-        return weatherClient.getWeather(zipcode);
+    public List<Weather> getWeather(@PathVariable("zipcode") String zipcode){
+        List<Weather> weathers = new ArrayList<>();
+        weathers.add(weatherClient.getWeather(zipcode));
+        weathers.add(weatherClient.getWeather( String.valueOf(Integer.parseInt(zipcode) + 1)));
+        weathers.add(weatherClient.getWeather( String.valueOf(Integer.parseInt(zipcode) + 2)));
+
+        return weathers;
     }
+//
+//    @RequestMapping(value = "/weather/data/", method = RequestMethod.POST, consumes = "application/json")
+//    public void createWeather(@RequestBody Weather data) {
+//        System.out.println(data.getHumidity());
+//    }
 }

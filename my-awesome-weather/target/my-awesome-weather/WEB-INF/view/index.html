@@ -2,17 +2,17 @@
 <html lang="en" ng-app="app">
 <head>
     <title>My Angular test app</title>
-    <script type="text/javascript" src="../../assets/js/angular.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/app.js"></script>
-    <link rel="stylesheet" href="../../assets/css/app.css">
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body ng-controller="WeatherController as ctrl" >
-    <div id="weather-div">
+    <div id="weather-div" class="container">
         <input type="text" id="zipcode" class="field-style field-split align-left" ng-model="zipcode" name="zipcode" placeholder="Zipcode"/>
-        <button class="btn btn-primary" ng-click="getWeather(zipcode)">Show Weather</button>
+        <button class="btn btn-success" ng-click="getWeather(zipcode)">Show Weather</button>
 
-        <table class="table table-striped table-data">
+        <table class="table table-bordered table-inverse">
             <thead>
             <tr>
                 <th>Maximum Temperature</th>
@@ -22,7 +22,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr ng-repeat="weather in weathers">
                 <td>{{weather.maxTemp}}</td>
                 <td>{{weather.minTemp}}</td>
                 <td>{{weather.pressure}}</td>
