@@ -10,11 +10,11 @@ app.config(['$qProvider', function ($qProvider) {
 
 app.controller('WeatherController', function($scope, $http) {
         $scope.getWeather = function(zipcode){
-            $scope.weathers = null;
+            $scope.weather = null;
             $scope.dataAvailable = false; //just to show a note when data is available
             $http.get('/weather/' + zipcode).then(function (response) {
-                $scope.weathers = response.data;
-                if($scope.weathers != null || $scope.weathers.length > 0){
+                $scope.weather = response.data;
+                if($scope.weather != null || $scope.weather.length > 0){
                     $scope.dataAvailable = true;
                 }
             })

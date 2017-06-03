@@ -1,8 +1,0 @@
-com/weather/assignment/exception/ServerErrorException.class
-com/weather/assignment/AppConfig/CORSFilter.class
-com/weather/assignment/AppConfig/WeatherAppConfig.class
-com/weather/assignment/AppConfig/SpringMvcInitializer.class
-com/weather/assignment/wetherclient/WeatherClient.class
-com/weather/assignment/exception/DataNotFoundException.class
-com/weather/assignment/controller/WeatherControl.class
-com/weather/assignment/model/Weather.class

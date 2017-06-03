@@ -25,15 +25,9 @@ public class WeatherControl {
     }
 
     @RequestMapping (value = "/weather/{zipcode}", method = RequestMethod.GET)
-    @ExceptionHandler(DataNotFoundException.class)
     @ResponseBody
-    public List<Weather> getWeather(@PathVariable("zipcode") String zipcode){
-        List<Weather> weathers = new ArrayList<>();
-        weathers.add(weatherClient.getWeather(zipcode));
-        weathers.add(weatherClient.getWeather( String.valueOf(Integer.parseInt(zipcode) + 1)));
-        weathers.add(weatherClient.getWeather( String.valueOf(Integer.parseInt(zipcode) + 2)));
-
-        return weathers;
+    public Weather getWeather(@PathVariable("zipcode") String zipcode){
+        return weatherClient.getWeather(zipcode);
     }
 //
 //    @RequestMapping(value = "/weather/data/", method = RequestMethod.POST, consumes = "application/json")

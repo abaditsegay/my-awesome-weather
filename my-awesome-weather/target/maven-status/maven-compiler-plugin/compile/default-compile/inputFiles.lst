@@ -1,8 +1,0 @@
-/Users/abadi/projects/MyWeather/my-awesome-weather/src/main/java/com/weather/assignment/exception/ServerErrorException.java
-/Users/abadi/projects/MyWeather/my-awesome-weather/src/main/java/com/weather/assignment/AppConfig/WeatherAppConfig.java
-/Users/abadi/projects/MyWeather/my-awesome-weather/src/main/java/com/weather/assignment/model/Weather.java
-/Users/abadi/projects/MyWeather/my-awesome-weather/src/main/java/com/weather/assignment/wetherclient/WeatherClient.java
-/Users/abadi/projects/MyWeather/my-awesome-weather/src/main/java/com/weather/assignment/exception/DataNotFoundException.java
-/Users/abadi/projects/MyWeather/my-awesome-weather/src/main/java/com/weather/assignment/controller/WeatherControl.java
-/Users/abadi/projects/MyWeather/my-awesome-weather/src/main/java/com/weather/assignment/AppConfig/SpringMvcInitializer.java
-/Users/abadi/projects/MyWeather/my-awesome-weather/src/main/java/com/weather/assignment/AppConfig/CORSFilter.java
